@@ -30,6 +30,11 @@ app.get('/',(req,res)=>{
     res.render('index');
 });
 
+app.get('/add_user',(req,res)=>{
+    // res.send("Crud Application");
+    res.render('add_user');
+});
+
 
 app.listen(3000,()=>{
     console.log(`Server is running on http://localhost:${PORT}`);
