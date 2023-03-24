@@ -25,15 +25,9 @@ app.use('/css',express.static(path.resolve(__dirname,"assets/css")));
 app.use('/img',express.static(path.resolve(__dirname,"assets/img")));
 app.use('/js',express.static(path.resolve(__dirname,"assets/js")));
 
-app.get('/',(req,res)=>{
-    // res.send("Crud Application");
-    res.render('index');
-});
+// load router
 
-app.get('/add_user',(req,res)=>{
-    // res.send("Crud Application");
-    res.render('add_user');
-});
+app.use('/',require('./server/routes/router'));
 
 
 app.listen(3000,()=>{
